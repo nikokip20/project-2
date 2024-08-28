@@ -18,6 +18,8 @@ AJ
 aj@lkn.io | @ajlkn
 
 
+To view the page use this link: https://nikokip20.github.io/project-2/
+
 Credits:
 
 	Demo Images:
