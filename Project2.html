@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo">Portfolio</a>
+		</header>
+
+	
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Post -->
+			<section class="post">
+				<header class="major">
+					<h1>Data Analysis<br />
+						Project</h1>
+					<p>Introduction</p>
+				</header>
+				<div class="image main"><img src="./images/projectLogo.jpg" alt="" /></div>
+				<p>Analyzing the release patterns and content characteristics of Netflix shows provides valuable
+					insights into the evolution of streaming services and consumer preferences. For this study, we will
+					utilize a dataset encompassing Netflix shows released between 2008 and 2021. This dataset not only
+					highlights the company's strategic shifts but also sheds light on the variety of content offered to
+					viewers over the years. It includes detailed information about each movie and series, such as the
+					names of actors and directors, release dates, and categorical variables like content rating and type
+					(TV Show or Movie). With over 7000 entries, the dataset reveals significant trends and gaps, such as
+					missing director and cast member names, which have been addressed by imputing with "unknown" or
+					removing overly detailed descriptions. By visualizing this data, we aim to uncover patterns in
+					release volumes and other key metrics, enhancing our understanding of Netflix's content strategy and
+					its impact on the video-on-demand landscape.</p>
+				<div class="image main"><img src="./images/Analysis1.png" alt="" /></div>
+				<p>Visualising data can give us a much better understanding of the data and what it represents, in this
+					first diagram the main focus will be to show the number of shows released to the streaming service.
+					The company began running cloud streaming services in 2008 and we can observe that in its initial
+					start, the service was not so popular, due to the fact that in early 2000, the company started as a
+					DVD distributor. Something to note is the missing instances in 2010, the reason for that might be
+					that during the cleaning of the data, some of it might have been removed due to junk data, or due to
+					entirely missing information in the date section of the data. The null values are movies or series
+					that were released but there was no information regarding their release date, those instances of
+					movies were kept because they still offer information that can be used. We can also observe a trend
+					with the increase in popularity of cloud streaming services, we can note that on-demand for
+					streaming services became more popular in the most recent years.
+					In the following graph, we will be looking into the popularity of stand-up comedy throughout the
+					years.</p>
+				<div class="image main"><img src="./images/Analysis2.png" alt="" /></div>
+				<p>By filtering the Ganres to show only the stand-up comedy genres, we can see that the demand for the
+					genre increases and the amount of added shows gradually rises until it peaks in 2018, after that, we
+					can see a downward trend with the amount of added shows.In our data the movie genres vary from one
+					another, for example, the genre of one movie could be Action & Adventure and there are movies that
+					are “ Action & Adventure, Anime Features, Children & Family Movies” There are further 5 more
+					sub-categories for the Action & Adventure genre, due to this we will be grouping the all the
+					different sub-categories in order to better understand the witch genres were more popular throughout
+					the years, the same concept will be applied for the other genres to make visualisation more
+					efficient.</p>
+				<div class="image main"><img src="./images/Analysis3.png" alt="" /></div>
+				<p>After the data is sorted in ascending order, an observation can be made as to how the demand for
+					different genres increases throughout the year. We can note that there is an upward trend after 2014
+					in regard to the “Drama”, “Comedies”, and “Documentaries” releases, they gradually until the numbers
+					peak during 2019. After 2019 the top most popular genres either remain constant as is the case for
+					the comedy genre, or they begin to gradually decrease. </p>
+				<div class="image main"><img src="./images/Analysis4.png" alt="" /></div>
+				<p>From this simple graph, we can make a consideration that the organisation is trying to appeal the
+					mature audience. Further using the information from this table we can group all the ratings for the
+					mature audience and observe what are the most popular titles among the mature audience. For that, a
+					set will be created with the corresponding rating.</p>
+				<div class="image main"><img src="./images/Analysis5.png" alt="" /></div>
+				<p> From this view, it can be noted that the demand for the mature audience is more focused on “Drama
+					titles” (802 title releases), “Comedies”(557 title releases) and “Documentaries”(400 title
+					releases). Further looking into the set for the “General audience” </p>
+				<div class="image main"><img src="./images/Analysis6.png" alt="" /></div>
+				<p>There are some similarities, we can note that both the “mature audience” and the “general audience”
+					have the “Drama” genre as one of the top 3.
+					Moreover by making an inner joining both for both “mature audience” and “general audience” and using
+					it as a filter, in the end, the result of the data displayed will be only the instances that occur
+					in both sets. This will be especially useful as the organisation can provide content in that area
+					and satisfy more of its customer base.
+				</p>
+				<div class="image main"><img src="./images/Analysis7.png" alt="" /></div>
+				<p>An interesting finding is that in 2018 the most popular genres for the general audience are Drama,
+					Documentaries and Children & Family Movies.</p>
+				<div class="image main"><img src="./images/Analysis8.png" alt="" /></div>
+				<p>But in 2019 there is a big shift in the genres.</p>
+				<div class="image main"><img src="./images/Analysis9.png" alt="" /></div>
+				<p>The most notable one is that during this year the most amount of content added is “Children & Family
+					Movies” and the content added for “Drama” has decreased from what it was during 2018. Another very
+					notable change is that the content of “Action & Adventure” and “Comedy” genres have significantly
+					increased.</p>
+				<p><b>Selection of Data Mining Algorithm and Data Pre-processing:</b></p>
+				<p>For the chosen data mining algorithm that will be implemented is the time series algorithm. Time
+					series is collecting numerical data in sequential time intervals. The time intervals can be (yearly,
+					quarterly, monthly, weekly and more depending on the data used). A time-series plot shows the
+					variable of interest against the interval of time. In our case our dataset for the release date of
+					titles we have information up to the date where an instance of a title was added, our variable of
+					interest, in this case, will be the number of titles released and the interval of time will be the
+					release dates of titles</p>
+				<div class="image main"><img src="./images/Analysis10.png" alt="" /></div>
+				<p>In this graph that was used for the data visualisation, we can observe that there is a trend in the
+					popularity of stand-up comedy shows, based on this data we can start making predictions on future
+					trends, this can also be applied for different genres.The main variables that will be used for the
+					data mining section will be the count of titles released and the release dates. The first major
+					alteration to the dataset was that the release date section was formatted to DD/MM/YY, there were
+					some instances where data in regards to the release date was missing, so it was decided to delete
+					those instances of data as we cannot use them, further, there were instances where the date was not
+					showing in the right format, that data was also removed from the dataset. Each table row was
+					transformed to the right format type e.g.(in the type row in our data it is set to be either TV-Show
+					or Movie).</p>
+				<p><b>Data Mining</b></p>
+				<div class="image main"><img src="./images/Analysis11.png" alt="" /></div>
+				<p>In this first graph a linear trendline is used, and we can make a note that the strength of the fit
+					of this model is considerably above average for the first two genres Comedies with an r-value of
+					(0.66), Children & Family with an r-value of (0.67) and strength of the fit is not as good for the
+					Action & Adventure genre with(0.45). The strength of the model fifths the Children & Family model
+					best which suggests that the number of instances added in a year will gradually increase throughout
+					the years, which may suggest that it will come close to the numbers of the Comedies.</p>
+				<div class="image main"><img src="./images/Analysis12.png" alt="" /></div>
+				<p>In this next graph the first observation made is that the strength of the model fits very well the
+					r-value in this case for the forecast is 0.81 and for the actual forecast indicator it is 0.77, the
+					trendline suggests that there is some upwards trend.</p>
+				<div class="image main"><img src="./images/Analysis13.png" alt="" /></div>
+				<p>For this time series a Polinominal trendline is used, there is a strong fit with the model the
+					r-value for the Actual Movies added is (0.86) and the r-value for the estimation is 0.99. In this
+					diagram, there is a downward trend in the actual model and we can see that estimation confirms that
+					trend.</p>
+				<div class="image main"><img src="./images/Analysis14.png" alt="" /></div>
+				<p>This time series shows the trend of TV shows in comparison to Movies and their corresponding trends.
+					The trend of the Actual movies is upwards, the strength of the fit is 0.72, and the r-value for the
+					estimated Movies is 0.99 which fits the model well, there is an upwards trend that can be observed
+					also. The model fits the actual and estimated TV show quite well with an r-value of 0.86 for the
+					actual and 0.99 for the estimated forecast.</p>
+				<div class="image main"><img src="./images/Analysis15.png" alt="" /></div>
+				<p>In this time series, there are two genres that are less popular amongst the general audience. In this
+					case, the model seems to not fit solid the Children and family genre, the r-values here are 0.56 for
+					the actual genre and for the estimated one it is 0.39. Moving to the other genre, the strength of
+					the fit is higher than what it was in the other genre and its forecast, the r-values for the actual
+					British TV series is 0.85 and the estimate is 0.78, in this time series we can observe an upwards
+					trend for the Children& Family genre, the trend for the British TVseries, on the other hand, is
+					remains constant and we are not observing much of a trend.</p>
+				<p><b>Data Ethics:</b></p>
+				<p>Regarding data ethics relating to data analysis, the main concern here is Privacy, it has to be
+					considered that one has the right to:Confidentiality - meaning that one can limit the spread of
+					information about themselves.Anonymity- stating that anyone has the right to be free from unwanted
+					attentionSolitude- avoidance of physical proximity to others.The concerns regarding the ethical
+					issue are the private information of individuals, and how it can affect them, in general, data
+					mining is capable of identifying individuals from a large amount of anonymous data. In order to
+					protect private data there have to be security measures implemented, but the responsibility falls
+					under the organisation, government, and businesses in other words the responsibility falls under the
+					organisation that is collecting that information. In order to regulate data collection in order to
+					prevent security violations the GDPR was invented, its main purpose is to clear the concerns of
+					customers, regulators and other groups regarding the safety of personnel data. Another purpose of
+					the GDPR is to account for the swift development of modern data processing techniques and
+					technologies.Looking at the professional issue is that computer professionals must design their
+					systems in a way that the user is aware of what information is being stored about them and another
+					requirement for a system is that it should allow an individual to customise the levels of privacy
+					like the level of security and the level of acceptable recording/monitoring/tracking. Professionals
+					have a duty to implement adequate security measures, meaning the data has to be preserved in a way
+					that third parties will not interfere, an example of this will be preserving the data through either
+					encryption or anonymisation.</p>
+				<p><b>Conclusion:</b></p>
+				<p>To conclude from the trends observed we can note on that the exponential growth in the titles
+					released for the “General audience” as well as for the “Adult audience”. Further from the overall
+					analysis, it seems that there is a larger volume of content that is added for the “General
+					audience”. Another observation is that there seems to be a larger volume of Movies compared to the
+					TV-Serieses and from the findings above we can note the fact that this trend will continue
+					throughout the year when the ratio of movies to series is higher.
+					The strength of which the model fitted the data is considerably strong, the lowest value for the
+					strength of the model that we have is (0.45) and the highest (0.99) .
+					Managers from Netflix can use these findings to find witch genres are gaining popularity and it
+					could greatly help in their decision-making, regarding what type of content they should be adding.
+					They could also use this to make further predictions on what the audience would like to see more in
+					the future.
+					Furthermore, if you are a content provider and you want this can greatly helps as they can use these
+					findings to see what kind of content is being added and what kind of content they should focus on to
+					offer to the streaming service. Another example where this information can help is in the
+					movie/tv-series industry as it provides a glimpse to what is the current demand for the user, as
+					well as how it might be in the future. This could help directors to focus on genres that are popular
+					among the audience, or to focus on genres that are predicted to gain more popularity.
+				</p>
+			</section>
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<section class="split contact">
+				<section>
+					<h3>Phone</h3>
+					<p><a href="#">+447541434106</a></p>
+				</section>
+				<section>
+					<h3>Email</h3>
+					<p><a href="#">malkia1maimyna@gmail.com</a></p>
+				</section>
+			</section>
+		</footer>
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<ul>
+				<li>&copy; Untitled</li>
+				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
